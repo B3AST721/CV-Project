@@ -12,6 +12,7 @@ class GeneralInfo extends Component {
       }
     }
 
+
     handleName = (e) => {
         this.setState({
             name: e.target.value
@@ -34,6 +35,11 @@ class GeneralInfo extends Component {
     return (
         <div>
             <h1 className='text-2xl underline flex justify-center mt-10'>General Information</h1>
+            <div>
+                <h2><b>Name:</b> {this.state.name}</h2>
+                <h2><b>Email:</b> {this.state.email}</h2>
+                <h2><b>Phone Number:</b> +{this.state.phone}</h2>
+            </div>
             <form>
                 <div>
                     <input onChange={this.handleName} type='text' className='border border-solid border-black' value={this.state.name} />
@@ -44,7 +50,7 @@ class GeneralInfo extends Component {
                 <div>
                     <input onChange={this.handlePhone} type='number' className='border border-solid border-black' value={this.state.phone} />
                 </div>
-                <button type='submit' className='bg-blue-400 px-3 py-1 rounded mx-4'>Save</button>
+                <button onClick='' type='submit' className='bg-blue-400 px-3 py-1 rounded mx-4'>Save</button>
             </form>
         </div>
     )
