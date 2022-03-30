@@ -50,7 +50,7 @@ class GeneralInfo extends Component {
   render() {
     return (
         <div>
-            <h1 className='text-2xl underline flex justify-center my-10 '>General Information</h1>
+            <h1 className='text-2xl underline flex justify-center my-10'>General Information</h1>
             <div className='mb-8 flex justify-evenly'>
                 <div>
                     <h2><b>Name:</b> {this.state.name}</h2>
