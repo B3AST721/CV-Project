@@ -9,6 +9,7 @@ class GeneralInfo extends Component {
          name: 'Name',
          email: 'johndoe@gmail.com',
          phone: 1234567890,
+         saved: true,
       }
     }
 
@@ -30,19 +31,35 @@ class GeneralInfo extends Component {
         })
     }
 
+    handleEdit = () => {
+        this.setState({
+            saved: false
+        })
+    }
+
+    handleSave = () => {
+        this.setState({
+            saved: true
+        })
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault()
+    }
+
   render() {
     return (
         <div>
             <h1 className='text-2xl underline flex justify-center my-10 '>General Information</h1>
-            <div className='flex justify-evenly'>
+            <div className='mb-8 flex justify-evenly'>
                 <div>
                     <h2><b>Name:</b> {this.state.name}</h2>
                     <h2><b>Email:</b> {this.state.email}</h2>
-                    <h2><b>Phone Number:</b> +{this.state.phone}</h2>
+                    <h2><b>Phone Number:</b> {this.state.phone}</h2>
                 </div>
-                <button className='bg-blue-400 px-3 py-1 rounded mx-4'>Edit</button>
+                <button onClick={this.handleEdit.bind(this)} className='bg-blue-400 px-3 py-1 rounded mx-4'>Edit</button>
             </div>
-            <form className='flex flex-col justify-center items-center'>
+            <form onSubmit={this.onSubmit} className={this.state.saved ? 'hidden': 'flex flex-col justify-center items-center'}>
                 <div>
                     <input onChange={this.handleName} type='text' className='border border-solid border-black' value={this.state.name} />
                 </div>
@@ -52,7 +69,7 @@ class GeneralInfo extends Component {
                 <div>
                     <input onChange={this.handlePhone} type='number' className='border border-solid border-black' value={this.state.phone} />
                 </div>
-                <button type='submit' className='bg-blue-400 px-3 py-1 rounded mx-4 mt-2'>Save</button>
+                <button onClick={this.handleSave.bind(this)} className='bg-blue-400 px-3 py-1 rounded mx-4 mt-2'>Save</button>
             </form>
         </div>
     )
