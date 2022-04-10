@@ -71,6 +71,7 @@ class GeneralInfo extends Component {
                 </div>
                 <button onClick={this.handleSave.bind(this)} className='bg-blue-400 px-3 py-1 rounded mx-4 mt-2'>Save</button>
             </form>
+            <h1 className='text-2xl underline flex justify-center my-10'>Educational Experience</h1>
         </div>
     )
   }
