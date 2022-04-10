@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import EducationalExperience from './EducationalExperience';
 
-export class Button extends Component {
+export class EducationalButton extends Component {
     constructor(props) {
       super(props)
     
@@ -26,7 +26,7 @@ export class Button extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.onClick} className='bg-blue-400 px-3 py-1 rounded absolute right-10 bottom-60'>+</button>
+        <button onClick={this.onClick} className='bg-blue-400 px-3 py-1 rounded fixed right-10 bottom-60'>+</button>
         {this.clickedComponents()}
         <h1 className='text-2xl underline flex justify-center my-10'>Work Experience</h1>
       </div>
@@ -34,4 +34,4 @@ export class Button extends Component {
   }
 }
 
-export default Button
+export default EducationalButton

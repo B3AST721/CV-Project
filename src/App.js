@@ -2,8 +2,9 @@ import React, {Component} from "react";
 import Heading from "./components/Heading";
 import GeneralInfo from "./components/GeneralInfo";
 import EducationalExperience from "./components/EducationalExperience";
-import Button from "./components/Button";
+import EducationalButton from "./components/EducationalButton";
 import WorkExperience from "./components/WorkExperience";
+import WorkButton from "./components/WorkButton";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Heading />
       <GeneralInfo />
       <EducationalExperience />
-      <Button />
+      <EducationalButton />
       <WorkExperience />
+      <WorkButton />
     </div>
   );
 }
